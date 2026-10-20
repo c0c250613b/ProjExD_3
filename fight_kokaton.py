@@ -104,7 +104,7 @@ class Beam:
         self.vx, self.vy = bird.dire
         henkan = math.atan2(-self.vy, self.vx)
         kaiten = math.degrees(henkan)
-        self.img = pg.transform.rotozoom(self.img, kaiten, 1.0)
+        self.img = pg.transform.rotozoom(self.img, kaiten, 0.9)
         self.rct = self.img.get_rect()
         self.rct.centerx = bird.rct.centerx + bird.rct.width * self.vx // 5
         self.rct.centery = bird.rct.centery + bird.rct.height * self.vy // 5
